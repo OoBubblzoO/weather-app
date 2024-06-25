@@ -1,7 +1,7 @@
-document.getElementById('searchButton').addEventListener('click', function(){
+document.getElementById('searchButton').addEventListener('click', function() {
     const city = document.getElementById('cityInput').value;
-    const apiKey ='30aa2b43a8b8201a109c4737fd9f7d20';
-    const apiUrl ='https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric';
+    const apiKey = '30aa2b43a8b8201a109c4737fd9f7d20';
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     fetch(apiUrl)
         .then(response => response.json())
