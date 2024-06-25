@@ -10,10 +10,12 @@ document.getElementById('searchButton').addEventListener('click', function() {
             if (data.cod === 200) {
                 weatherDisplay.innerHTML = `
                     <h2>${data.name}</h2>
-                    <p>Temperature: ${data.main.temp}°C</p>
                     <p>Weather: ${data.weather[0].description}</p>
+                    <p>Lowest Temperature: ${data.main.temp_min}°F</p>
+                    <p>Highest Temperature: ${data.main.temp_max}°F</p>
+                    <p>Current Temperature: ${data.main.temp}°F</p>
                     <p>Humidity: ${data.main.humidity}%</p>
-                    <p>Wind Speed: ${data.wind.speed} m/s</p>
+                    <p>Wind Speed: ${data.wind.speed} mph</p>
                 `;
             } else {
                 weatherDisplay.innerHTML = `<p> City not found</p>`;
@@ -30,7 +32,6 @@ document.getElementById('searchZipButton').addEventListener('click', function(){
     const apiKey = '30aa2b43a8b8201a109c4737fd9f7d20';
 
     //Geocoding API to get longitude and latitude
-
     const geoUrl = `http://api.openweathermap.org/geo/1.0/zip?zip=${zip},${country}&appid=${apiKey}`;
 
     fetch(geoUrl)
@@ -57,10 +58,12 @@ document.getElementById('searchZipButton').addEventListener('click', function(){
                 forecastDisplay.innerHTML += `
                     <div>
                         <h3>${date}</h3>
-                        <p>Temperature: ${forecast.main.temp}°F</p>
-                        <p>Weather: ${forecast.weather[0].description}</p>
-                        <p>Humidity: ${forecast.main.humidity}%</p>
-                        <p>Wind Speed: ${forecast.wind.speed} mph</p>
+                        <p>Weather: ${data.weather[0].description}</p>
+                        <p>Lowest Temperature: ${data.main.temp_min}°F</p>
+                        <p>Highest Temperature: ${data.main.temp_max}°F</p>
+                        <p>Hourly Temperature (At this time): ${data.main.temp}°F</p>
+                        <p>Humidity: ${data.main.humidity}%</p>
+                        <p>Wind Speed: ${data.wind.speed} mph</p>
                     </div>
                 `; 
             } 
