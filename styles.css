@@ -4,7 +4,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #3d3d3d;
     margin: 0;
 }
 
@@ -16,12 +16,12 @@ body{
     text-align: center;
 }
 
-#cityInput{
+#cityInput, #zipcodeInput{
     padding: 10px;
     font-size: 16px;
 }
 
-#searchButton {
+#searchButton, #searchZipButton {
     padding: 10px;
     font-size: 16px;
     margin-left: 10px;

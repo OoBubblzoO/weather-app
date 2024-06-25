@@ -9,10 +9,16 @@
 <body>
     <div id="app">
         <h1>Weather App</h1>
-        <p>Search a location!</p>
+        <p>Enter name of city for today's weather.</p>
         <div>
             <input type="text" id="cityInput" placeholder="Enter city name.">
             <button id="searchButton">Search</button>
+        </div>
+        <p>Enter zip code of city for five day forecast!</p>
+        <div>
+            <input type="text" id="zipcodeInput" pattern="\d*" placeholder="Enter city zipcode.">
+            <input type="text" id="countryInput" placeholder="Enter country code (ex., US)">
+            <button id="searchZipButton" >Search Zipcode</button>        
         </div>
         <div id="weatherDisplay">
             <!-- Weather information will be displayed within here-->
