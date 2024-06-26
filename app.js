@@ -58,12 +58,12 @@ document.getElementById('searchZipButton').addEventListener('click', function(){
                 forecastDisplay.innerHTML += `
                     <div>
                         <h3>${date}</h3>
-                        <p>Weather: ${data.weather[0].description}</p>
-                        <p>Lowest Temperature: ${data.main.temp_min}°F</p>
-                        <p>Highest Temperature: ${data.main.temp_max}°F</p>
-                        <p>Hourly Temperature (At this time): ${data.main.temp}°F</p>
-                        <p>Humidity: ${data.main.humidity}%</p>
-                        <p>Wind Speed: ${data.wind.speed} mph</p>
+                        <p>Weather: ${forecast.weather[0].description}</p>
+                        <p>Lowest Temperature: ${forecast.main.temp_min}°F</p>
+                        <p>Highest Temperature: ${forecast.main.temp_max}°F</p>
+                        <p>Hourly Temperature (At this time): ${forecast.main.temp}°F</p>
+                        <p>Humidity: ${forecast.main.humidity}%</p>
+                        <p>Wind Speed: ${forecast.wind.speed} mph</p>
                     </div>
                 `; 
             } 
